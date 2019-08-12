@@ -14,12 +14,11 @@ while todayte.month == cmon:
     if todayte.weekday()==3 and todayte.month==cmon: #this is Thursday
         nthu = todayte
 
+#start = date(2019,7,1)
+#end = date(2019,7,25)
 
-#start = pd.to_datetime('today').date()
-#end = pd.to_datetime('today').date()
-
-start = date(2019,7,1)
-end = date(2019,7,25)
+start = pd.to_datetime('today').date()
+end = pd.to_datetime('today').date()
 futures = True
 expiry = date(nthu.year,nthu.month,nthu.day)
 
@@ -36,7 +35,7 @@ data = pd.concat(array)
 print(data)
 data.to_csv("~/Documents/Financial Analysis/NSE DATA_near.csv")
 
-#Code below for far month data
+#Code below for mid month data
 
 nthu = todayte
 while todayte.month == nmon:
