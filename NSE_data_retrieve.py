@@ -24,7 +24,7 @@ expiry = date(nthu.year,nthu.month,nthu.day)
 
 array = []
 
-stockNames = ['ADANIPORTS','HCLTECH','IBULHSGFIN','SUNPHARMA','ZEEL','YESBANK','TECHM','INFY','UPL','BPCL','ICICIBANK','VEDL','HDFC','ITC','GAIL','AXISBANK','HINDPETRO','TCS','IOC','GRASIM','BAJFINANCE','TITAN','ULTRACEMCO','WIPRO','SBIN','BHARTIARTL','MARUTI','KOTAKBANK','ASIANPAINT','COALINDIA','LT','JSWSTEEL','TATAMOTORS','HDFCBANK','EICHERMOT','RELIANCE','CIPLA','INFRATEL','HINDUNILVR','TATASTEEL','HEROMOTOCO','M&M','NTPC','INDUSINDBK','BAJAJFINSV','BAJAJ-AUTO','POWERGRID','DRREDDY','HINDALCO','ONGC',]
+stockNames = ['AAA','BBB','CCC'....]
 
 for x in stockNames:
   temp = get_history(symbol=x, start=start, end=end, futures = futures, expiry_date = expiry)
