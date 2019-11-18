@@ -1,3 +1,4 @@
+#Author: Ajitesh Shankar Das
 import pandas as pd
 from datetime import date, datetime , timedelta
 from nsepy import get_history
