@@ -1,5 +1,5 @@
 #Author: Ajitesh Shankar Das
-import nsepy #nsepy library by Swapnil Jariwala
+import nsepy #nsepy library by Swapnil Jariwala https://nsepy.readthedocs.io/en/latest/
 from datetime import date, timedelta
 import datetime
 import pandas as pd
