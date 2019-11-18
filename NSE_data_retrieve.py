@@ -1,7 +1,7 @@
 #Author: Ajitesh Shankar Das
 import pandas as pd
 from datetime import date, datetime , timedelta
-from nsepy import get_history
+from nsepy import get_history #nsepy library by Swapnil Jariwala https://nsepy.readthedocs.io/en/latest/
 
 todayte = datetime.today()
 cmon = todayte.month
