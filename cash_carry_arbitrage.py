@@ -1,4 +1,5 @@
-import nsepy
+#Author: Ajitesh Shankar Das
+import nsepy #nsepy library by Swapnil Jariwala
 from datetime import date, timedelta
 import datetime
 import pandas as pd
