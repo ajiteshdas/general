@@ -9,13 +9,16 @@ stocks = ['AAA','BBB','CCC',...]
 futures = []
 d = []
 
-#check if query date is monday and automatically set the query date range
-if datetime.datetime.now().weekday() == 0 or datetime.datetime.now().weekday() >= 5:
-    start = pd.to_datetime('today').date() - timedelta(days=3)
-    end = start
+#automatically sets the date range for the futures
+if(today_datetime.weekday() >= 5):
+    start = today_datetime.date() - timedelta(days=today_datetime.weekday() - 4)
+elif(today_datetime.hour < 18):
+    if(today_datetime.weekday() == 0):
+        start = today_datetime.date() - timedelta(days=3)
+    else:
+        start = today_datetime.date() - timedelta(days=1)
 else:
-    start = pd.to_datetime('today').date() - timedelta(days=1)
-    end = start
+    start = today_datetime.date()
 
 #automatically set the expiry date as last THURSDAY of current month for current contract
 for i in range(25,31):
