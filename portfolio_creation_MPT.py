@@ -30,7 +30,9 @@ cov_matrix = returns.cov()
 cov_matrix
 
 #Optional Step: calculating the SD matrix
-annual_sd = np.sqrt(variances) * np.sqrt(250)
+var = returns.var()
+daily_sd = np.sqrt(variances)
+annual_sd = daily_sd * np.sqrt(252)
 
 #Optional step: calculate the correlation matrix
 corr_matrix = returns.corr()
