@@ -5,6 +5,9 @@ import matplotlib.pyplot as plt
 import datetime
 import scipy.optimize as sco
 import pandas_datareader.data as web
+import lxml
+from lxml import html
+import requests
 
 #stocks = ['ABC','CDE','DEF']
 
@@ -77,8 +80,19 @@ for counter, symbol in enumerate(data.columns.tolist()):
 portfolios = pd.DataFrame(p_data)
 portfolios
 
+#get the 91-day t-bill rate from RBI website
+url = 'https://rbi.org.in'
+page = requests.get(url)
+tree = html.fromstring(page.content)
+table = tree.xpath('//div[@class="accordionContent"]/table')
+rf = table[4].text_content()[1322:1327]
+rf
+
 #Calculate Sharpe ratio
-rf = 5.15% #91-tbill rate(riskfree rate)
+
+#91-tbill rate(riskfree rate)
+rf = round(float(rf),2)/100 
+
 portfolios['Sharpe'] = (portfolios['Returns'] - rf)/p_data['Volatility']
 
 #get the porfolio with max Sharpe ratio
